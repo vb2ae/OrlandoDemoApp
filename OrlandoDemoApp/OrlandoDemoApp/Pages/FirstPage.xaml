@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrlandoDemoApp.Pages.FirstPage">
+  <StackLayout>
+    <Label Text="{Binding MainText}" FontSize="36" HeightRequest="100"/>
+    <Button Text="Hello World" Command="{Binding NavigateToSecondPage}"></Button>
+  </StackLayout>
+</ContentPage>
+

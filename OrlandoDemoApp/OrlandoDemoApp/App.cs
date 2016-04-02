@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FreshMvvm;
+using OrlandoDemoApp.PageModels;
+using OrlandoDemoApp.Pages;
+using OrlandoDemoApp.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,20 +15,12 @@ namespace OrlandoDemoApp
     {
         public App()
         {
+            FreshIOC.Container.Register<ITextService, TextService>();
             // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
+            var firstPage= FreshMvvm.FreshPageModelResolver.ResolvePageModel<FirstPageModel>();
+            var navConatiner = new  FreshMvvm.FreshNavigationContainer(firstPage);
+            MainPage = navConatiner;
+            
         }
 
         protected override void OnStart()

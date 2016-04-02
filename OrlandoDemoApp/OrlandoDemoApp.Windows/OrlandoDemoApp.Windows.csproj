@@ -141,6 +141,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FreshIOC">
+      <HintPath>..\..\..\..\Users\vb2ae\Source\Repos\FreshMvvm\src\FreshMvvm\bin\Debug\FreshIOC.dll</HintPath>
+    </Reference>
+    <Reference Include="FreshMvvm">
+      <HintPath>..\..\..\..\Users\vb2ae\Source\Repos\FreshMvvm\src\FreshMvvm\bin\Debug\FreshMvvm.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\win81\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
